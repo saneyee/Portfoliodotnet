@@ -19,6 +19,12 @@ namespace Portfolio.Controllers
 
             return View();
         }
+        public IActionResult Blog()
+        {
+            ViewData["Message"] = "Your blog page.";
+
+            return View();
+        }
 
         public IActionResult Contact()
         {
