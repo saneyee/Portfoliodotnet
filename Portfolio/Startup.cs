@@ -72,12 +72,9 @@ namespace Portfolio
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Account}/{action=Index}/{id?}");  // <-There is an edit here
+                    template: "{controller=Home}/{action=Index}/{id?}");  // <-There is an edit here
             });
-            app.Run(async (context) =>
-            {
-                await context.Response.WriteAsync("Hello World!");
-            });
+           
         }
     }
 }

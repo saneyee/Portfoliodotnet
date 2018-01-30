@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Portfolio.Models;
 
 namespace Portfolio.Controllers
 {
@@ -15,22 +16,32 @@ namespace Portfolio.Controllers
 
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            ViewData["Project"] = "Your application description page.";
 
             return View();
         }
         public IActionResult Blog()
         {
-            ViewData["Message"] = "Your blog page.";
+            ViewData["Project"] = "Your blog page.";
 
             return View();
         }
 
         public IActionResult Contact()
         {
-            ViewData["Message"] = "Your contact page.";
+            ViewData["Project"] = "Your contact page.";
 
             return View();
+        }
+
+
+
+        public IActionResult Projects()
+        {
+
+            var topProjects = Project.GetProjects();
+            return View(topProjects);
+
         }
 
         public IActionResult Error()

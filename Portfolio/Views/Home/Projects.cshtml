@@ -1,0 +1,21 @@
+﻿
+@model IEnumerable<Portfolio.Models.Project>
+
+@{
+    ViewData["Title"] = "Projects";
+}
+<h2>Top Starred Projects</h2>
+<hr />
+<ol>
+    @foreach (var project in Model)
+    {
+        <li>
+            <ul>
+                <li>Project Name: @Html.DisplayFor(modelItem => project.name)</li>
+                <li>Language: @Html.DisplayFor(modelItem => project.language)</li>
+                <li>URL: @Html.DisplayFor(modelItem => project.html_url)</li>
+     
+            </ul>
+        </li>
+    }
+</ol>

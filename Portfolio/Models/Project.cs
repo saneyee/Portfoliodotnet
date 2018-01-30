@@ -14,11 +14,16 @@ namespace Portfolio.Models
         public string html_url { get; set; }
 
 
-        public List<Project> GetProjects()
+        public Project() 
         {
-            var client = new RestClient("https://api.github.com/users/");
+            
+        }
 
-            var request = new RestRequest(string.Format("{0}/starred", "saneyee"), Method.GET);
+        public static List<Project> GetProjects()
+        {
+            var client = new RestClient("https://api.github.com/users/saneyee/starred");
+            var request = new RestRequest();
+            //var request = new RestRequest(string.Format("{0}/starred", "saneyee"), Method.GET);
 
             request.AddHeader("User-Agent", "saneyee");
             request.AddParameter("per_page", "3");
@@ -29,8 +34,8 @@ namespace Portfolio.Models
             {
                 response = await GetResponseContentAsync(client, request) as RestResponse;
             }).Wait();
-            JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(response.Content);
-            var projectList = JsonConvert.DeserializeObject<List<Project>>(jsonResponse["projects"].ToString());
+            JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(response.Content);
+            var projectList = JsonConvert.DeserializeObject<List<Project>>(jsonResponse.ToString());
             return projectList;
         }
 
