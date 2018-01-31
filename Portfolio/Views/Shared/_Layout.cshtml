@@ -6,8 +6,10 @@
     <title>@ViewData["Title"] - Saneyee Sarkar</title>
 
     <environment names="Development">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin" rel="stylesheet">   
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+         <link rel="stylesheet" href="~/css/styles.css" />
     </environment>
     <environment names="Staging,Production">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -41,11 +43,12 @@
             </div>
         </div>
     </nav>
-    <div class="container body-content">
+    <div>
         @RenderBody()
 
         <footer>
-            
+
+                
         </footer>
     </div>
 

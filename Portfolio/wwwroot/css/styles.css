@@ -1,0 +1,21 @@
+﻿body {
+    font-family: 'Libre Franklin', sans-serif;
+
+}
+.intro {
+    background-image: url('../images/black-img.jpg');
+    color: white;
+    background-size: cover;
+    text-align: center;
+    height: 800px;
+}
+
+.box {
+    padding: 50px;
+    background-color: rosybrown;
+    height: 50px;
+}
+
+.resume {
+    text-align: center;
+}
