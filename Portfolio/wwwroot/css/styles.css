@@ -1,21 +1,42 @@
-﻿body {
-    font-family: 'Libre Franklin', sans-serif;
-
-}
-.intro {
-    background-image: url('../images/black-img.jpg');
-    color: white;
+﻿body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: url('../images/1350.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    text-align: center;
-    height: 800px;
 }
-
-.box {
-    padding: 50px;
-    background-color: rosybrown;
-    height: 50px;
+a,a:visited,a:active {
+    color:#ffffff
 }
-
-.resume {
-    text-align: center;
+.wrapper {
+    width: 100%;
+    position: absolute;
+    background-color: rgba(83, 160, 125, 0.8);
+}
+.header {
+    height: 60px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.1);
+    color: #ffffff;
+    font-family: 'Lato', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 60px
+}
+.menu{
+  font-weight:100;
+  font-size:18px;      
+}
+.menu span{
+    padding:0 5px;
+}
+.section {
+    height: 90vh
+}
+.about-me-section{
+    width:100%;
+    background-color:#ffffff;
 }
